@@ -11,6 +11,7 @@ URL:      https://github.com/homeport/dyff
 Source0:  https://github.com/homeport/dyff/archive/refs/tags/v%{version}.tar.gz
 
 BuildRequires: golang
+BuildRequires: git
 
 %description
 diff tool for YAML files, and sometimes JSON
