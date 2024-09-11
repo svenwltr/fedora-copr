@@ -12,6 +12,9 @@ Source0:  https://github.com/homeport/dyff/archive/refs/tags/v%{version}.tar.gz
 
 BuildRequires: golang
 
+%description
+diff tool for YAML files, and sometimes JSON
+
 %prep
 %setup -q -n dyff-%{version}
 
