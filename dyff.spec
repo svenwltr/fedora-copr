@@ -2,8 +2,6 @@
 %define version 1.9.0
 %define release 2%{?dist}
 
-%global _missing_build_ids_terminate_build 0
-
 Summary:  diff tool for YAML files, and sometimes JSON
 Name:     %{name}
 Version:  %{version}
@@ -22,7 +20,7 @@ diff tool for YAML files, and sometimes JSON
 %setup -q -n dyff-%{version}
 
 %build
-go build ./cmd/dyff
+go build -buildmode=pie -ldflags="-linkmode=external -X main.version=%{version}" ./cmd/dyff
 
 %install
 # Create the necessary directory structure in the buildroot
